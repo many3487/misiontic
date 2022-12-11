@@ -1,0 +1,21 @@
+{% extends './layout.html'%}
+{% block title %} 
+{{ data.titulo }} 
+{% endblock %}
+
+{% block body %}
+<a href="/"> principal</a>
+<h1>{{data.bienvenida}}</h1>
+
+<h5>esta es la pestaña de   <b>{{data.nombre}}</b></h5>
+
+<h2>estimado cliente, en contados minutos el representante {{data.nombre}} 
+    se comunicará con usted </h2>
+    {% if data.celular is not none %} 
+    <h3>desde el numero de telefono {{data.numero}}. </h3>
+    {% endif %}
+
+    
+
+{% endblock %}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/layout.css')}}" >
+</head>
+<body>
+    <h1>mision tic</h1>
+    {%block body%} 
+    {% endblock %}
+    <footer class="contactos">
+        <b id="Titlecontacto">Contactos</b>
+        <table id="contacto">
+            <tr>
+                <th>Área</th>
+                <th>Encargado</th>
+                <th>Número</th>
+            </tr>
+            <tr>
+                <td><a href="/contacto/Luis Enrique/55555">Ventas</a></td>
+                <td>Luis Enrique</td>
+                <td>555555</td>
+            </tr>
+            <tr>
+                <td><a href="/contacto/Christian Giron/777777">Compras</a></td>
+                <td>Christian Giron</td>
+                <td>777777</td>
+            </tr>
+            <tr>
+                <td><a href="/contacto/Manuel Jimenez/666666">Financiera</a></td>
+                <td>Manuel Jimenez</td>
+                <td>666666</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

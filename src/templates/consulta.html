@@ -1,0 +1,39 @@
+{% extends './layout.html'%}
+{% block title %} 
+consulta Base de datos
+{% endblock %}
+
+{% block body %}
+<a href="/"> principal</a>
+<table>
+  <!-- Cabecera -->
+  <tr>
+    <th>Nombre producto</th>
+    <!-- Celda de cabecera de la columna 1 -->
+    <th>Color</th>
+    <!-- Celda de cabecera de la columna 2 -->
+    <th>Precio unitario</th>
+    <!-- Celda de cabecera de la columna 3 -->
+    <th>Dimension</th>
+    <!-- Celda de cabecera de la columna 3 -->
+    <th>SubCategoria</th>
+    <!-- Celda de cabecera de la columna 3 -->
+  </tr>
+  <!-- Primera fila -->
+  <tr>
+    <td>{%for fila in data %}
+        <tr> 
+            {%for x in fila%}
+            <td>
+                {{x}}
+            </td> 
+            {%endfor%}
+        </tr>
+    {% endfor %}
+</td>
+    
+    
+</table>
+
+
+{% endblock %}
